@@ -4,14 +4,16 @@ Main entry point for the Job Tracker API.
 
 from fastapi import FastAPI
 
+from app.core.config import settings
+
 app = FastAPI(
-    title="Job Tracker API",
-    version="0.1.0",
+    title=settings.APP_NAME,
+    version=settings.VERSION,
     description="Backend API for tracking job applications.",
 )
 
 
 @app.get("/")
 async def root():
-    """Root endpoint to verify the API is running."""
-    return {"message": "Job Tracker API is running!"}
+    """Root endpoint."""
+    return {"message": f"Welcome to {settings.APP_NAME}!"}
