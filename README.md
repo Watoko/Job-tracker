@@ -1,42 +1,43 @@
-# Job Tracker API
+# 🚀 Job Tracker API
 
-A production-style backend application for tracking job applications, built with **FastAPI**, **SQLAlchemy**, and **PostgreSQL**.
-
----
-
-## Features
-
-- RESTful API
-- Versioned API routes
-- Centralized configuration
-- Structured logging
-- PostgreSQL database
-- SQLAlchemy ORM
-- Alembic database migrations
-- JWT Authentication *(coming soon)*
-- Automated testing *(coming soon)*
+A production-style REST API for tracking job applications, built with **FastAPI**, **SQLAlchemy**, and **PostgreSQL**.
 
 ---
 
-## Tech Stack
+## ✨ Features
 
-- Python 3.14+
+- REST API
 - FastAPI
-- SQLAlchemy 2.0
-- Alembic
+- SQLAlchemy ORM
 - PostgreSQL
-- Uvicorn
-- Ruff
-- Black
-- Pytest
-- uv
+- Alembic Migrations
+- JWT Authentication *(Coming Soon)*
+- Docker Support *(Coming Soon)*
+- Automated Testing *(Coming Soon)*
 
 ---
 
-## Project Structure
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Language | Python 3.14 |
+| Framework | FastAPI |
+| Database | PostgreSQL |
+| ORM | SQLAlchemy 2 |
+| Migrations | Alembic |
+| Package Manager | uv |
+| Linting | Ruff |
+| Formatting | Black |
+| Testing | Pytest |
+
+---
+
+## 📁 Project Structure
 
 ```text
 app/
+│
 ├── api/
 ├── auth/
 ├── core/
@@ -51,18 +52,19 @@ app/
 
 ---
 
-## Running the Project
+## 🚀 Running the Project
 
 ```bash
 uv sync
+
 python -m uvicorn app.main:app --reload
 ```
 
 ---
 
-## API Documentation
+## 📖 API Documentation
 
-Swagger UI:
+Swagger UI
 
 ```
 http://127.0.0.1:8000/docs
@@ -70,6 +72,23 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Status
+## 🛣 Roadmap
 
-🚧 Under active development.
+- ✅ Project Setup
+- ✅ Configuration
+- ✅ Logging
+- ✅ API Versioning
+- 🔄 Database Layer
+- ⏳ Authentication
+- ⏳ CRUD Operations
+- ⏳ File Uploads
+- ⏳ Docker
+- ⏳ CI/CD
+
+---
+
+## 👨‍💻 Author
+
+Anthony Mwangi Watoko
+
+GitHub: https://github.com/Watoko
