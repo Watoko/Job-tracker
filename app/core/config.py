@@ -16,9 +16,7 @@ class Settings(BaseSettings):
     VERSION: str = "0.1.0"
     DEBUG: bool = True
 
-    DATABASE_URL: str = (
-        "postgresql+psycopg://postgres:password@localhost/job_tracker"
-    )
+    DATABASE_URL: str = "postgresql+psycopg://postgres:password@localhost/job_tracker"
 
     model_config = SettingsConfigDict(
         env_file=".env",

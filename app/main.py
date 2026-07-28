@@ -43,6 +43,7 @@ app.include_router(api_router, prefix="/api/v1")
 # Application Lifecycle Events
 # --------------------------------------------------------------------
 
+
 @app.on_event("startup")
 async def startup_event() -> None:
     """

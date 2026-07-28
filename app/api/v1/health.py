@@ -30,9 +30,7 @@ async def root() -> dict[str, str]:
     Returns:
         dict[str, str]: Welcome message confirming the API is running.
     """
-    return {
-        "message": f"Welcome to {settings.APP_NAME}!"
-    }
+    return {"message": f"Welcome to {settings.APP_NAME}!"}
 
 
 @router.get("/health")
@@ -43,6 +41,4 @@ async def health_check() -> dict[str, str]:
     Returns:
         dict[str, str]: Current API health status.
     """
-    return {
-        "status": "healthy"
-    }
+    return {"status": "healthy"}
