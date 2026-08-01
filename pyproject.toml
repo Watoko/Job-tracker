@@ -8,6 +8,7 @@ dependencies = [
     "fastapi>=0.140.13",
     "passlib[bcrypt]>=1.7.4",
     "psycopg[binary]>=3.3.4",
+    "pwdlib[argon2]>=0.3.0",
     "pydantic-settings>=2.14.2",
     "python-jose[cryptography]>=3.5.0",
     "python-multipart>=0.0.32",
