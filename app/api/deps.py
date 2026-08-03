@@ -15,6 +15,7 @@ from app.repositories.user import UserRepository
 
 oauth2_scheme = HTTPBearer()
 
+
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(oauth2_scheme),
     db: Session = Depends(get_db),
@@ -26,9 +27,7 @@ def get_current_user(
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials.",
-        headers={
-            "WWW-Authenticate": "Bearer"
-        },
+        headers={"WWW-Authenticate": "Bearer"},
     )
 
     try:

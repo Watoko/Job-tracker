@@ -3,6 +3,7 @@ User database model.
 """
 
 from sqlalchemy import Boolean, Column, DateTime, Integer, String
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
 from app.db.base import Base
@@ -34,4 +35,10 @@ class User(Base):
         server_default=func.now(),
         onupdate=func.now(),
         nullable=False,
+    )
+
+    job_applications = relationship(
+        "JobApplication",
+        back_populates="user",
+        cascade="all, delete-orphan",
     )
