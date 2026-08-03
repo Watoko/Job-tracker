@@ -7,7 +7,7 @@ Provides:
 - JWT creation
 """
 
-from datetime import datetime, timedelta, UTC
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 from jose import jwt
@@ -35,6 +35,7 @@ def verify_password(password: str, hashed_password: str) -> bool:
 # --------------------------------------------------------------------
 # JWT Tokens
 # --------------------------------------------------------------------
+
 
 def create_access_token(
     subject: str | Any,

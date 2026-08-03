@@ -1,7 +1,4 @@
-from app.schemas.user import UserBase
-from app.schemas.user import UserCreate
-from app.schemas.user import UserLogin
-from app.schemas.user import UserRead
+from app.schemas.user import UserBase, UserCreate, UserLogin, UserRead
 
 __all__ = [
     "UserBase",

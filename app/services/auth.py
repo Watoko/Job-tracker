@@ -2,11 +2,12 @@
 Authentication service.
 """
 
-from app.repositories.user import UserRepository
-from app.schemas.user import UserCreate
-from app.schemas.auth import LoginRequest, Token
-from app.models.user import User
 from app.core.security import create_access_token
+from app.models.user import User
+from app.repositories.user import UserRepository
+from app.schemas.auth import LoginRequest, Token
+from app.schemas.user import UserCreate
+
 
 class AuthService:
     """Authentication business logic."""

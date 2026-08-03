@@ -11,8 +11,3 @@ class Base(DeclarativeBase):
     """
     Base class for SQLAlchemy models.
     """
-
-    pass
-
-
-

@@ -2,17 +2,15 @@
 Authentication API endpoints.
 """
 
-from fastapi import APIRouter
-from fastapi import Depends
-from fastapi import HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
 from app.db.deps import get_db
 from app.models.user import User
 from app.repositories.user import UserRepository
-from app.schemas.user import UserCreate
 from app.schemas.auth import LoginRequest, Token
+from app.schemas.user import UserCreate
 from app.services.auth import AuthService
 
 router = APIRouter(
@@ -46,6 +44,7 @@ def register_user(
         "is_active": user.is_active,
     }
 
+
 @router.post("/login", response_model=Token)
 def login_user(
     login_data: LoginRequest,
@@ -65,6 +64,7 @@ def login_user(
             status_code=401,
             detail=str(exc),
         )
+
 
 @router.get("/me")
 def get_current_user_profile(

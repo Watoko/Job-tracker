@@ -5,7 +5,7 @@ Contains reusable FastAPI dependencies such as authentication.
 """
 
 from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPBearer
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 
@@ -13,11 +13,10 @@ from app.core.config import settings
 from app.db.deps import get_db
 from app.repositories.user import UserRepository
 
-
 oauth2_scheme = HTTPBearer()
 
 def get_current_user(
-    token: str = Depends(oauth2_scheme),
+    credentials: HTTPAuthorizationCredentials = Depends(oauth2_scheme),
     db: Session = Depends(get_db),
 ):
     """
@@ -34,7 +33,7 @@ def get_current_user(
 
     try:
         payload = jwt.decode(
-            token,
+            credentials.credentials,
             settings.SECRET_KEY,
             algorithms=[settings.ALGORITHM],
         )

@@ -29,8 +29,7 @@ class Settings(BaseSettings):
     # --------------------------------------------------------------------
 
     SECRET_KEY: str = (
-        "4d2f9d0a9b3245f8b8d6a0c1e7f9b6d2"
-        "a4c5e8f1b2d3c6f7a8b9c0d1e2f3a4b5"
+        "4d2f9d0a9b3245f8b8d6a0c1e7f9b6d2" "a4c5e8f1b2d3c6f7a8b9c0d1e2f3a4b5"
     )
 
     ALGORITHM: str = "HS256"
